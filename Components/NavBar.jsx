@@ -41,7 +41,7 @@ export default function NavBar() {
         align={"center"}
       >
         <Flex
-          flex={{ base: 1, md: "auto" }}
+          flex={{ base: 0, md: "auto" }}
           ml={{ base: -2 }}
           display={{ base: "flex", md: "none" }}
         >
@@ -75,7 +75,6 @@ export default function NavBar() {
         </Flex>
 
         <Stack
-          flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
           spacing={6}
@@ -89,7 +88,7 @@ export default function NavBar() {
             Sign In
           </Button>
           <Button
-            display={{ base: "none", md: "inline-flex" }}
+            display={{ base: "none", lg: "inline-flex" }}
             colorScheme="blue"
             fontSize={"sm"}
             fontWeight={600}

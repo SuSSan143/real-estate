@@ -7,8 +7,8 @@ import {
   Flex,
   FormControl,
   FormLabel,
-  HStack,
   Select,
+  Stack,
 } from "@chakra-ui/react";
 import {
   rentFrequencyFilterArray,
@@ -41,7 +41,8 @@ const Filters = ({ setData, setIsLoading }) => {
 
   return (
     <FormControl>
-      <HStack
+      <Stack
+        direction={["column", "column", "column", "row"]}
         bgColor="white"
         justifyContent="center"
         alignItems="center"
@@ -148,7 +149,7 @@ const Filters = ({ setData, setIsLoading }) => {
         >
           Search
         </Button>
-      </HStack>
+      </Stack>
     </FormControl>
   );
 };

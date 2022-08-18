@@ -23,11 +23,10 @@ function App() {
     fetchData();
   }, []);
 
-
   return (
     <Box as="main">
       <NavBar />
-      <Box px="36" bgColor="pink.50">
+      <Box px={{ base: "4", md:"15", lg: "36" }} bgColor="pink.50">
         <Header />
         <Filters setData={setData} setIsLoading={setIsLoading} />
         {isLoading ? (
@@ -35,7 +34,15 @@ function App() {
             <Spinner size="xl" />
           </Flex>
         ) : (
-          <Grid my="10" templateColumns="repeat(3, 1fr)" gap={6}>
+          <Grid
+            my="10"
+            templateColumns={{
+              base: "repeat(1, 1fr)",
+              md: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            }}
+            gap={6}
+          >
             {data.map((property, i) => (
               <GridItem key={i}>
                 <Card property={property} />
